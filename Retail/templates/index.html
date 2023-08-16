@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommend</title>
+</head>
+<body>
+    <p>welcome to Grocery Store</p>
+    
+
+    <div>
+        <form action="{% url 'recommend' %}" method="post">
+            {% csrf_token %}
+            <label for="product">Enter product name</label>
+            
+            
+            <input type="text" name="product" list="product">
+
+            <datalist id="product">
+                <option value="Coffee">
+                <option value="Tea">
+                <option value="Cake">
+                <option value="Pastry">
+                <option value="Sandwich">
+              </datalist>
+            <br>
+            <button type="submit">ADD TO CART</button>
+        </form>
+    </div>
+
+    
+</body>
+</html>
